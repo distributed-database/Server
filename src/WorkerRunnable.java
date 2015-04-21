@@ -4,6 +4,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.IOException;
 import java.net.Socket;
+import java.sql.SQLException;
 import java.util.Scanner;
 
 import org.json.JSONArray;
@@ -34,23 +35,27 @@ public class WorkerRunnable implements Runnable{
             
             DataInputStream dis=new DataInputStream(input);  
             String responseJson = (String)dis.readUTF();
+            System.out.println("Transfering statistics");
             System.out.println(responseJson);
+            JSONArray array = new JSONArray(responseJson);
             
+            ServerDatabase serverStatsDatabase = new ServerDatabase();
+            System.out.println("Updating the db");
+            serverStatsDatabase.updateDB(array);
             
-//            JSONObject obj = new JSONObject(string);
-//            JSONArray array = obj.getJSONArray("relation");
-//            for (int i = 0; i < array.length(); i++) {
-//            	String relationName=array.getJSONObject(i).getString("name");
-//    			Server.hashTable.put(relationName,ipAddress);
-//    			System.out.println("Got info about "+ relationName);																																										
-//    		}
             dis.close();
             input.close();
             
         } catch (IOException e) {
             //report exception somewhere.
             e.printStackTrace();
-        }
+        } catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
     }
 }
 

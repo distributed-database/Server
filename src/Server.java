@@ -15,21 +15,18 @@ public class Server {
 		String jsonString = null;
 		
 		MultiThreadedServer server = new MultiThreadedServer(9000);
+		System.out.println("server started on port 9000");
 		new Thread(server).start();
 
 		
 		try {
 			//sleep for 30 secs.
+			System.out.println("Sleeping the main thread for 10 seconds to let clients connect to server");
 		    Thread.sleep(30 * 1000);
 		} catch (InterruptedException e) {
 		    e.printStackTrace();
 		}
 		
-//		rawInput op = new rawInput();
-//		GetStatistics stat = new GetStatistics();
-//		jsonString = op.ReadInput();
-//		System.out.println(jsonString);
-//		stat.getStatistics(jsonString);
 		
 		
 		System.out.println("Stopping Server");
