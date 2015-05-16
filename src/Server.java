@@ -31,8 +31,9 @@ public class Server {
 		
 		System.out.println("Stopping Server");
 		server.stop();
-		
+		System.out.println("Starting algorithm");
 		SDD1 strategy = new SDD1();
+		strategy.Sdd();
 		
 	}
 }

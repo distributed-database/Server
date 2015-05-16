@@ -8,7 +8,7 @@ public class SDD1 {
 	/**
 	 * @param args
 	 */
-	public void SDD1() {
+	public void Sdd() {
 		// TODO Auto-generated method stub
 		CalcModel test = new Statistics();
 		Calculator calculator = new Calculator(test); 	
