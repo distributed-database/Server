@@ -31,7 +31,9 @@ public class Server {
 		
 		System.out.println("Stopping Server");
 		server.stop();
-	
+		
+		SDD1 strategy = new SDD1();
+		
 	}
 }
 
