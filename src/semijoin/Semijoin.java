@@ -16,8 +16,8 @@ public class Semijoin {
 	private double cost;
 	private double benefit;
 	private double ratio;
-	public Semijoin(Relation leftRelation, Relation rightRelation,double cost,
-			double benefit,Projection leftProjection, Projection rightProjection) {
+	public Semijoin(Relation leftRelation, Relation rightRelation,double benefit,
+			double cost,Projection leftProjection, Projection rightProjection) {
 		this.leftRelation = leftRelation;
 		this.rightRelation = rightRelation;
 		this.leftProjection = leftProjection;

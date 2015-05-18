@@ -9,7 +9,7 @@ public class QueryReader {
 		System.out.println("Enter the number of relations");
 		try {
 			num = Integer.parseInt(br.readLine());
-			System.out.println(num);
+//			System.out.println(num);
 			
 		} catch (NumberFormatException e) {
 			// TODO Auto-generated catch block
@@ -24,7 +24,7 @@ public class QueryReader {
 		for(int i=0; i<num ; i++){
 			try {
 				relationsStrings[i]=br.readLine();
-				System.out.println(relationsStrings[i]);
+//				System.out.println(relationsStrings[i]);
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

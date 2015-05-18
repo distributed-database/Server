@@ -147,7 +147,7 @@ public class Statistics extends CalcModel {
 					rs.next();
 					if(!ht.containsKey(R1)){
 //						System.out.println(R1);
-						sfsj = rs.getDouble(1)/rs.getDouble(2)/1.001;
+						sfsj = rs.getDouble(1)/rs.getDouble(2);
 						if(sfsj <= 0.0001){
 							sfsj = 0.0001;
 						}
@@ -169,7 +169,7 @@ public class Statistics extends CalcModel {
 					rs.next();
 					if(!ht.containsKey(R2)){
 //						System.out.println(R2);
-						sfsj = rs.getDouble(1)/rs.getDouble(2)/1.001;
+						sfsj = rs.getDouble(1)/rs.getDouble(2);
 						if(sfsj <= 0.0001){
 							sfsj = 0.0001;
 						}

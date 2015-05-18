@@ -22,7 +22,7 @@ public class Server {
 		try {
 			//sleep for 30 secs.
 			System.out.println("Sleeping the main thread for 10 seconds to let clients connect to server");
-		    Thread.sleep(30 * 1000);
+		    Thread.sleep(1 * 1000);
 		} catch (InterruptedException e) {
 		    e.printStackTrace();
 		}
